@@ -1,0 +1,7 @@
+Description:
+  Generate HackTree files.
+
+Example:
+  `rails generate hack_tree`
+
+  This will create essential files for HackTree initialization in your project.

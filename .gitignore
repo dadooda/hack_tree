@@ -1,0 +1,10 @@
+# General Ruby.
+.ref-*
+.old*
+*-old*
+
+# Project-specific.
+/*.rb
+/doc/
+/pkg/
+/.rvmrc

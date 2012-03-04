@@ -1,0 +1,20 @@
+
+Start console:
+
+    $ rails console
+
+List available hacks:
+
+    >> c
+
+Request help on a hack:
+
+    >> c.hello?
+
+Use the hack:
+
+    >> c.hello
+    >> c.hello "Ruby"
+
+Place your application's hacks in `lib/hacks/`.
+
