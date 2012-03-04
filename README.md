@@ -2,8 +2,12 @@
 Organize and share your console hacks
 =====================================
 
-WARNING! THIS IS WORK IN PROGRESS, NOTHING IS GUARANDEED TO WORK AT ALL
------------------------------------------------------------------------
+WARNING!
+--------
+
+THIS IS WORK IN PROGRESS, NOTHING IS GUARANDEED TO WORK
+-------------------------------------------------------
+
 
 Introduction
 ------------
@@ -22,10 +26,18 @@ group :development do
 end
 ~~~
 
+, or use a `gem "hack_tree", :git => "git://github.com/dadooda/hack_tree.git"` for edge version.
+
 Install the gem:
 
 ~~~
 $ bundle install
+~~~
+
+Generate essentials:
+
+~~~
+$ rails generate hack_tree
 ~~~
 
 
@@ -57,7 +69,7 @@ Use the hack:
 >> c.hello "Ruby"
 ~~~
 
-Place your application's hacks in `lib/hacks/`.
+You're good to go. Place your own hacks in `lib/hacks/`.
 
 
 Copyright
