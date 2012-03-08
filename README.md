@@ -21,12 +21,9 @@ Setup (Rails 3)
 Add to your `Gemfile`:
 
 ~~~
-group :development do
-  gem "hack_tree"
-end
+gem "hack_tree"
+#gem "hack_tree", :git => "git://github.com/dadooda/hack_tree.git"    # Edge version.
 ~~~
-
-, or use a `gem "hack_tree", :git => "git://github.com/dadooda/hack_tree.git"` for edge version.
 
 Install the gem:
 

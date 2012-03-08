@@ -50,7 +50,7 @@ HackTree.define do
     nodes = nodes.sort_by do |node|
       [
         node.is_a?(::HackTree::Node::Group) ? 0 : 1,    # Groups first.
-        node.name.to_s,
+        node.global_name,
       ]
     end
 

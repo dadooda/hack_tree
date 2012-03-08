@@ -1,5 +1,4 @@
 HackTree.define do
-  desc "HackTree management hacks"
   group :hack_tree do
     desc <<-EOT
       Reload application hacks

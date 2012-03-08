@@ -142,8 +142,8 @@ module HackTree
 
     global_names.each do |global_name|
       bn = global_name.gsub(".", "/") + ".rb"
-      fn = File.join(File.dirname(__FILE__), "../hacks", bn)
-      load fn
+      fn = File.expand_path("../hacks/#{bn}", __FILE__)
+      require fn
     end
 
     nil
