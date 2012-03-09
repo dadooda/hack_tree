@@ -42,7 +42,10 @@ module HackTree
     end
 
     def inspect
-      # NOTE: Exceptions raised here result in `(Object doesn't support #inspect)`. No other details are available, be careful.
+      # NOTES:
+      #
+      # * Exceptions raised here result in `(Object doesn't support #inspect)`. No other details are available, be careful.
+      # * We don't return value from here, we **print** it directly.
 
       nodes = @instance.nodes.select {|node| node.parent == @parent}
 
@@ -103,7 +106,13 @@ module HackTree
             (["", node.full_desc] if node.full_desc),
           ].flatten(1).compact
 
+          # `out` are lines of text, eventually.
           ::Kernel.puts out.empty?? "No description, please provide one" : out
+
+          # For groups list contents after description.
+          #if node.is_a? Node::Group
+          #  ::Kernel.puts ["", self.class.new(@instance, node).inspect]
+          #end
         else
           # Group/hack request.
           case node

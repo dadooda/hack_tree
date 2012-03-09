@@ -1,14 +1,14 @@
+
+# Load all stuff.
 [
   "hack_tree/**/*.rb",
 ].each do |fmask|
-  Dir[File.join(File.dirname(__FILE__), fmask)].each do |fn|
+  Dir[File.expand_path("../#{fmask}", __FILE__)].each do |fn|
     require fn
   end
 end
 
 module HackTree
-  VERSION = "0.1.0"
-
   # Standard hacks bundled with the gem, their global names.
   STD_HACKS = [
     "hack_tree.reload",
@@ -156,78 +156,4 @@ module HackTree
   def self.instance
     @instance ||= Instance.new
   end
-end
-
-#--------------------------------------- Junk
-
-if false
-      # * Using array is a reliable way to ensure a newline after the banner.
-      ::Kernel.puts [
-        #"",
-        "Console hacks are available. Use `%s`, `%s.hack?`, `%s.hack [args]`" % ([@enabled_as]*3),
-        #"",
-      ]
-end
-
-if false
-  # Node (group/hack) regexp without delimiters.
-  NAME_REGEXP = /[a-zA-Z_]\w*/
-
-  # Node names which can't be used due to serious reasons.
-  FORBIDDEN_NAMES = [
-    :inspect,
-    :method_missing,
-    :to_s,
-  ]
-end
-
-if false
-  # Create the action object.
-  #
-  #   module Kernel
-  #     # Access our hacks via <tt>c</tt>.
-  #     def c
-  #       ::HackTree.action
-  #     end
-  #   end
-  #
-  #   >> c
-  #   hello       # Say hello
-  #   >> c.hello
-  #   Hello, world!
-  #
-  # See also ::enable.
-  def self.action
-    ActionContext.new(@nodes)
-  end
-
-  # Clear self.
-  def self.clear
-    # Request re-initialization upon first use of any kind.
-    @is_initialized = false
-  end
-
-  # Access nodes (groups/hacks) created via the DSL.
-  def self.nodes
-    @nodes
-  end
-
-  # See #nodes.
-  def self.nodes=(ar)
-    @nodes = ar
-  end
-
-  # NOTE: We need this wrapper to create private singletons.
-  class << self
-    private
-
-    # On-the-fly initializer.
-    def _otf_init
-      return if @is_initialized
-
-      @is_initialized = true
-      @nodes = []
-      @dsl_root = DslContext.new(@nodes)
-    end
-  end # class << self
 end

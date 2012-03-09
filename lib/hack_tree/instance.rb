@@ -12,17 +12,12 @@ module HackTree
       attrs.each {|k, v| send("#{k}=", v)}
     end
 
-    # Get action object.
+    # Create action object.
     #
     #   >> r.action
     #   hello       # Say hello
     #   >> r.action.hello
     #   Hello, world!
-    def action
-      ActionContext.new(self)
-    end
-
-    # Create action object. See HackTree::action for examples.
     def action
       ActionContext.new(self)
     end
