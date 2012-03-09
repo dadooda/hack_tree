@@ -16,6 +16,7 @@ module HackTree
     #
     #   >> r.action
     #   hello       # Say hello
+    #
     #   >> r.action.hello
     #   Hello, world!
     def action

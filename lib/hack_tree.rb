@@ -58,8 +58,10 @@ module HackTree
   #
   #   >> HackTree.enable
   #   Greetings.
+  #
   #   >> c
   #   hello         # Say hello
+  #
   #   >> c.hello
   #   Hello, world!
   #
