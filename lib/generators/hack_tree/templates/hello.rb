@@ -10,7 +10,7 @@ HackTree.define do
       >> c.hello "Ruby"
       Hello, Ruby!
   EOT
-  hack :hello do |who = "world"|
-    puts "Hello, #{who}!"
+  hack :hello do |*args|
+    puts "Hello, %s!" % (args[0] || "world")
   end
 end
