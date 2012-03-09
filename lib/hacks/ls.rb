@@ -41,8 +41,9 @@ HackTree.define do
           r.global_name =~ re,
           r.brief_desc && r.brief_desc =~ re,
 
-          # TODO: Include full as an option, later.
-          #r.full_desc && r.full_desc =~ re,    # Better without full_desc, or examples may match.
+          # Might some time include search in `full_desc` as an option.
+          # Must not be enabled by default since it returns too many results.
+          #r.full_desc && r.full_desc =~ re,
         ].any?
       end
     end

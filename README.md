@@ -9,10 +9,10 @@ HackTree lets you organize and share your console hacks in a simple and efficien
 
 Console hacks (or tricks) are handy methods you use in IRB console to do repetitive tasks. HackTree gives you the following opportunities:
 
-* Create hacks using a simple and uniform DSL.
-* Describe your hacks, much like you describe tasks in Rakefiles.
-* List available hacks and instantly view their descriptions right in your console.
-* Share hacks with your teammates, reuse them in different projects.
+* Create hacks using a **simple and uniform DSL**.
+* **Describe** your hacks, much like you describe tasks in Rakefiles.
+* **List available** hacks with descriptions right in your console.
+* **Share** hacks with your teammates, **reuse** them in different projects.
 
 
 Setup (Rails 3)

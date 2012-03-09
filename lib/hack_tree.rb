@@ -57,7 +57,7 @@ module HackTree
   # Enable HackTree globally.
   #
   #   >> HackTree.enable
-  #   Greetings.
+  #   Console hacks are available. Use `c`, `c.hack?`, `c.hack [args]`
   #
   #   >> c
   #   hello         # Say hello
@@ -67,14 +67,10 @@ module HackTree
   #
   # Options:
   #
-  #   :completion => T|F      # Enable completion enhancement. Default is true.
+  #   :completion => T|F      # Enable completion enhancement. Default is `true`.
   #   :with_std => [...]      # Load only these standard hacks.
   #   :without_std => [...]   # Load all but these standard hacks.
-  #   :quiet => T|F           # Be quiet. Default is false.
-  #
-  # Examples:
-  #
-  # TODO.
+  #   :quiet => T|F           # Be quiet. Default is `false`.
   def self.enable(method_name = :c, options = {})
     options = options.dup
     o = {}
