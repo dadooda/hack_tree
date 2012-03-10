@@ -9,8 +9,12 @@ Gem::Specification.new do |s|
 
   # Copy these from class's description, adjust markup.
   s.summary = %q{Organize and share your console hacks}
-  # TODO: Proper text.
-  s.description = %q{HackTree lets you organize and share your console hacks in an effective and uniform way. Blah-blah-blah.}
+  s.description = %q{HackTree lets you organize and share your console hacks in a simple and efficient way.
+
+* Create hacks using a simple and uniform DSL.
+* Describe your hacks, much like you describe tasks in Rakefiles.
+* List available hacks with descriptions right in your console.
+* Share hacks with your teammates, reuse them in different projects.}
   # end of s.description=
 
   s.files = `git ls-files`.split("\n")
